@@ -33,7 +33,7 @@ Found a bug in your app which only manifests when the database is in a certain s
 Commit the database state and save it, along with the code state, for later debugging.
 It's like having bookmarks for your development database.
 
-## 3. Future? Push, Pull, and Clone
+## 3. Future work and Ideas: Push, Pull, and Clone
 `dvol push/pull/clone <volume>`
 
 1 and 2 are great for a single developer on a local machine. As we validate this workflow we believe that real “oh wow” moments will come from being able to push and pull your volume from a shared resource preventing the need for your team create and manage a system for versioning and sharing increasingly large sql files and backups.
