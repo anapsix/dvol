@@ -104,9 +104,12 @@ class Containers(object):
                 self.client.remove_container(container['Id'], v=True)
 
     def _is_container_related(self, container, volume):
-        volume_driver_matches = (
-            container['Config']['VolumeDriver'] == self.volume_driver_name
-        )
+        if ('VolumeDriver' in container['Config']):
+            volume_driver_matches = (
+                container['Config']['VolumeDriver'] == self.volume_driver_name
+            )
+        else:
+            volume_driver_matches = False
 
         if not volume_driver_matches:
             return False
